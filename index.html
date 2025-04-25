@@ -1,0 +1,124 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BOGO Offer</title>
+  <link rel="stylesheet" href="index.css">
+  <style>
+
+  </style>
+  <script>
+    function clickUnit(id) {
+      for (let i = 1; i <= 3; i++) {
+        if (i == id) {
+          document.getElementById("unit" + id).checked = true;
+          document.getElementById("showdiv" + id).innerHTML = "<div class='select-row'><div>Size</div> <div>Colour</div></div><div class='select-row'><select><option>S</option><option>M</option><option>L</option></select>  <select>  <option>Black</option> <option>White</option><option>Colour</option></select></div> <div class='select-row'><select><option>S</option> <option>M</option><option>L</option></select>          <select><option>Colour</option> <option>Black</option><option>White</option> </select></div>"
+          document.getElementById("showdiv" + id).style = "display: block;";
+          document.getElementById("option" + id).style = "border-color: #ff7d9c;";
+        }
+        else {
+          document.getElementById("unit" + i).checked = false;
+          document.getElementById("showdiv" + i).innerHTML = "";
+          document.getElementById("option" + i).style = "";
+          document.getElementById("showdiv" + i).style = "display: none;";
+
+        }
+
+      }
+
+
+    }
+  </script>
+</head>
+
+<body>
+  <div class="card">
+    <h2>YAY! It’s BOGO</h2>
+    <div class="option" id="option1">
+      <div style="display: flex;">
+        <div>
+          <label><input type="radio" name="unit" value="1" id="unit1" onclick="clickUnit(1)">1 Unit <span
+              class="badge">10%
+              Off</span></label><br>
+        </div>
+        <div>
+          <small>$10.00 USD <del>$24.00 USD</del></small>
+        </div>
+      </div>
+      <div class="showdiv1" id="showdiv1" style="display: block;">
+
+      </div>
+
+    </div>
+
+    <div class="option" id="option2" style="border-color: #ff7d9c;">
+      <div class="popular-tag">MOST POPULAR</div>
+      <div style="display: flex;">
+        <div>
+          <label><input type="radio" name="unit" value="2" checked id="unit2" onclick="clickUnit(2)">2 Unit <span
+              class="badge">20% Off</span></label><br>
+        </div>
+        <div>
+          <small>$18.00 USD <del>$24.00 USD</del></small>
+        </div>
+      </div>
+      <div class="showdiv2" id="showdiv2" style="display: block;">
+        <div class='select-row'>
+          <div>Size</div>
+          <div>Colour</div>
+        </div>
+
+        <div class='select-row'>
+          #1 <select>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+          </select> <select>
+            <option>Black</option>
+            <option>White</option>
+            <option>Colour</option>
+          </select></div>
+        <div class='select-row'>
+          #2 <select>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+          </select> <select>
+            <option>Colour</option>
+            <option>Black</option>
+            <option>White</option>
+          </select></div>
+      </div>
+    </div>
+
+    <div class="option" id="option3">
+      <div style="display: flex;">
+        <div>
+          <label><input type="radio" name="unit" value="3" id="unit3" onclick="clickUnit(3)">3 Unit <span
+              class="badge">30%
+              Off</span></label><br>
+        </div>
+        <div>
+          <small>$24.00 USD <del>$24.00 USD</del></small>
+        </div>
+      </div>
+      <div class="showdiv3" id="showdiv3" style="display: block;">
+
+      </div>
+
+    </div>
+
+    <div class="total">
+      <div style="float: inline-start;color: #ff7d9c;">Free Delivery </div>
+      <div>
+      Total : $18.00 USD
+    </div>
+    </div>
+
+    <button class="btn">+ Add to Cart</button>
+    <div class="footer-note">@ Powered by Pumper</div>
+  </div>
+</body>
+
+</html>
